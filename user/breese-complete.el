@@ -99,7 +99,8 @@
   ;("<f11>" . projectile-multi-occur)
   ;("S-<f11>" . projectile-grep)
   )
-(use-package helm-projectile)
+(use-package helm-projectile
+  :ensure t)
 
 ; RTags
 (use-package rtags
