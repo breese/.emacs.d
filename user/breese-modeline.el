@@ -90,6 +90,7 @@
 			     (powerline-render rhs))
 		   )))))
 (use-package powerline
+  :ensure t
   :init
   (progn
     (setq powerline-default-separator 'wave)
