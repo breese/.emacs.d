@@ -19,6 +19,8 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 (require 'use-package)
+(unless (package-installed-p 'diminish)
+  (package-install 'diminish))
 
 ; User defined settings
 (setq user-file (concat user-emacs-directory "user.el"))
