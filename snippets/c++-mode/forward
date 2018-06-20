@@ -1,0 +1,3 @@
+#name : perfect forwarding
+# --
+std::forward<decltype($1)>(${1:Name})
