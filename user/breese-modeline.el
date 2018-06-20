@@ -42,6 +42,18 @@
 ;       ))
 
 ; https://github.com/milkypostman/powerline/
+
+(defface powerline-readonly-active1
+  '((t (:inherit powerline-active1)))
+  "Powerline active side face when buffer is read-only."
+  :group 'faces)
+
+(defface powerline-readonly-active2
+  '((t (:inherit powerline-active2)))
+  "Powerline active center face when buffer is read-only."
+  :group 'faces)
+
+; format: buffer - mode - projectile
 (defun my-powerline-theme ()
   "Setup the default mode-line."
   (interactive)
@@ -50,8 +62,8 @@
                   (:eval
 		   (let* ((active (powerline-selected-window-active))
 			  (mode-line (if active 'mode-line 'mode-line-inactive))
-			  (sideface (if active 'powerline-active1 'powerline-inactive1))
-			  (centerface (if active 'powerline-active2 'powerline-inactive2))
+			  (sideface (if active (if buffer-read-only 'powerline-readonly-active1 'powerline-active1) 'powerline-inactive1))
+			  (centerface (if active (if buffer-read-only 'powerline-readonly-active2 'powerline-active2) 'powerline-inactive2))
 			  (separator-left (intern (format "powerline-%s-%s"
 							  (powerline-current-separator)
 							  (car powerline-default-separator-dir))))
@@ -75,7 +87,7 @@
 				   (funcall separator-right centerface sideface)))
 			  (rhs (list
 				(funcall separator-right sideface sideface)
-				(when my-projectile-mode-line ; FIXME: Does not work (neither does my-projectile-has-mode-line)
+				(when my-projectile-mode-line
 				  (concat
 				   (powerline-raw " [" sideface)
 				   (powerline-raw my-projectile-mode-line sideface)

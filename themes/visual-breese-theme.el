@@ -2,8 +2,8 @@
 
 (defvar breese-palette
   '(("breese-black" . "dim gray")
-    ("breese-base" . "gainsboro")
-    ("breese-base-dark" . "azure4")
+    ("breese-base" . "white smoke")
+    ("breese-base-dark" . "SkyBlue4")
     ; Red palette
     ("breese-red-dark" . "firebrick")
     ("breese-red-pale" . "#cdc1c1") ; Redish azure3
@@ -20,7 +20,7 @@
     ("breese-blue-dark" . "midnight blue")
     ("breese-blue-light" . "cornflower blue")
     ("breese-steel" . "steel blue")
-    ("breese-steel-light" . "LightSteelBlue3")
+    ("breese-steel-light" . "light steel blue")
     ("breese-steel-dark" . "DarkSlateGray4")
     ("breese-blue-pale" . "#c1c1cd") ; Blueish azure3
     ("breese-violet" . "blue violet")
@@ -52,6 +52,7 @@
   `(header-line ((t (:italic t :background ,breese-base :box (:line-width 1 :style released-button)))))
   `(powerline-active1 ((t (:background ,breese-steel-light :foreground ,breese-black))))
   `(powerline-active2 ((t (:background ,breese-base :foreground ,breese-black))))
+  `(powerline-readonly-active1 ((t (:background ,breese-red-pale :foreground ,breese-black))))
   `(powerline-inactive1 ((t (:background ,breese-base :foreground ,breese-base-dark))))
   `(powerline-inactive2 ((t (:background ,breese-base :foreground ,breese-base-dark))))
   `(linum ((t (:foreground ,breese-base-dark))))
