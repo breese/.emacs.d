@@ -7,7 +7,7 @@
     ; Red palette
     ("breese-red-dark" . "firebrick")
     ("breese-red-pale" . "#cdc1c1") ; Redish azure3
-    ("breese-red-pale-dark" . "#c4c4b9")
+    ("breese-red-medium" . "IndianRed3")
     ("breese-brown" . "brown")
     ("breese-brown-dark" . "saddle brown")
     ("breese-brown-light" . "sienna")
@@ -52,7 +52,7 @@
   `(header-line ((t (:italic t :background ,breese-base :box (:line-width 1 :style released-button)))))
   `(powerline-active1 ((t (:background ,breese-steel-light :foreground ,breese-black))))
   `(powerline-active2 ((t (:background ,breese-base :foreground ,breese-black))))
-  `(powerline-readonly-active1 ((t (:background ,breese-red-pale :foreground ,breese-black))))
+  `(powerline-readonly-active1 ((t (:background ,breese-red-medium :foreground ,breese-base))))
   `(powerline-inactive1 ((t (:background ,breese-base :foreground ,breese-base-dark))))
   `(powerline-inactive2 ((t (:background ,breese-base :foreground ,breese-base-dark))))
   `(linum ((t (:foreground ,breese-base-dark))))
