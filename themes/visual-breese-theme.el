@@ -6,7 +6,6 @@
     ("breese-base-dark" . "SkyBlue4")
     ; Red palette
     ("breese-red-dark" . "firebrick")
-    ("breese-red-pale" . "#cdc1c1") ; Redish azure3
     ("breese-red-medium" . "IndianRed3")
     ("breese-brown" . "brown")
     ("breese-brown-dark" . "saddle brown")
@@ -14,7 +13,6 @@
     ; Green palette
     ("breese-green" . "forest green")
     ("breese-green-dark" . "dark olive green")
-    ("breese-green-pale" . "#c1cdc1") ; Greenish azure3
     ; Blue palette
     ("breese-blue" . "blue")
     ("breese-blue-dark" . "midnight blue")
@@ -24,8 +22,10 @@
     ("breese-steel-dark" . "DarkSlateGray4")
     ("breese-blue-pale" . "#c1c1cd") ; Blueish azure3
     ("breese-violet" . "blue violet")
-    ; Yellow
-    ("breese-yellow" . "khaki2")
+    ; Highlight
+    ("breese-region" . "LightSteelBlue2")
+    ("breese-green-pale" . "#e0eee0") ; Greenish azure2
+    ("breese-red-pale" . "#eee0e0") ; Redish azure2
     )
   "Colors")
 
@@ -58,7 +58,7 @@
   `(linum ((t (:foreground ,breese-base-dark))))
 
   ; Region
-  `(region ((t (:foreground nil :background ,breese-yellow))))
+  `(region ((t (:foreground nil :background ,breese-region))))
   `(secondary-selection ((t (:background ,breese-blue-pale))))
   `(hl-line ((t (:background ,breese-blue-pale))))
   `(show-paren-match ((t (:background ,breese-green-pale))))
