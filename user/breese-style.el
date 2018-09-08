@@ -22,9 +22,10 @@
 	(brace-list-open . 0)
 	(arglist-intro . +)))
     (prettify-symbols-alist
-     . (("!=" . 8800)
-	("<=" . 8804)
-	(">=" . 8805)))
+     . (("!=" . ?≠)
+	("<=" . ?≤)
+	(">=" . ?≥)
+	("->" . ?⟹)))
     (c-basic-offset . 4)
     (indent-tabs-mode . nil)
     (c-doc-comment-style . doxygen))
@@ -33,19 +34,7 @@
 
 ; Dynastrom C/C++ mode
 (defconst dynastrom-c-style
-  '("gnu"
-    (c-offsets-alist
-     . ((substatement-open . 0)
-	(innamespace . 0)
-	(brace-list-open . 0)
-	(arglist-intro . +)))
-    (prettify-symbols-alist
-     . (("!=" . 8800)
-	("<=" . 8804)
-	(">=" . 8805)))
-    (c-basic-offset . 4)
-    (indent-tabs-mode . nil)
-    (c-doc-comment-style . doxygen))
+  '("breese")
   "Dynastrom C/C++ style")
 (c-add-style "dynastrom" dynastrom-c-style)
 
@@ -64,6 +53,7 @@
   (let ((bname (buffer-file-name)))
     (cond
      ; Most specific must be first
+     ((string-match "src/aros/" bname) (c-set-style "dynastrom"))
      ((string-match "src/transenna/" bname) (c-set-style "dynastrom"))
 ;     ((string-match "src/maidsafe/" bname) (c-set-style "maidsafe"))
      ; Catch all
