@@ -39,6 +39,11 @@
 ; Cursor moves along logical lines
 (setq line-move-visual nil)
 
+; Presentation mode
+(use-package presentation
+  :ensure t
+  :diminish presentation-mode)
+
 ; Further configuration
 (add-to-list 'load-path (concat user-emacs-directory "user"))
 (require 'revert-all-buffers)
