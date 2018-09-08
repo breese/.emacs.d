@@ -20,7 +20,7 @@
     (bind-key "S-<f8>" #'gud-step)
     )
   :bind
-  ("S-<f9>" . gud-gdb)
+  ("S-<f10>" . gud-gdb)
   )
 
 ; High-light marker line
