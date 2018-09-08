@@ -33,7 +33,8 @@
   (add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
   (setq comint-prompt-read-only t)
   :bind
-  (("C-<f10>" . my-term))
+  (("<f10>" . my-term)
+   ("C-<f10>" . my-term))
   )
 
 ; Line mode
