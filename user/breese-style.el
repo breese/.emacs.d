@@ -46,7 +46,14 @@
   (progn
     (c-add-style "google" google-c-style)
     (defconst roku-c-style
-      '("roku")
+      '("google"
+	(c-offsets-alist
+	 . ((access-label . -)
+	    (case-label . 0)
+	    (inher-intro . 4)
+	    ))
+	(c-basic-offset . 4)
+	)
       "Roku Inc style")
     (c-add-style "roku" roku-c-style)
     ))
