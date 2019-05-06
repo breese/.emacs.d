@@ -102,19 +102,20 @@
   :ensure t)
 
 ; RTags
-(use-package rtags
-  :ensure t
-  :config
-  (progn
-    (setq rtags-use-helm t)
-    ;(add-hook 'c-mode-common-hook 'rtags-start-process-unless-running)
-    )
-  :bind
-  ("<f2>" . rtags-print-class-hierarchy)
-  ("<f4>" . rtags-find-symbol-at-point)
-  ("<S-f4>" . rtags-find-references-at-point)
-  ; FIXME: rtags-rename-symbol, rtags-get-include-file-for-symbol
-  )
+;(use-package rtags
+;  :ensure t
+;  :config
+;  (progn
+;    (setq rtags-use-helm t)
+;    ;(add-hook 'c-mode-common-hook 'rtags-start-process-unless-running)
+;    )
+;  :bind
+;; FIXME: Find other bindings
+;  ("<f2>" . rtags-print-class-hierarchy)
+;  ("<f4>" . rtags-find-symbol-at-point)
+;  ("<S-f4>" . rtags-find-references-at-point)
+;  ; FIXME: rtags-rename-symbol, rtags-get-include-file-for-symbol
+;  )
 ;(use-package rtags-ac
 ;  :config
 ;  (progn
