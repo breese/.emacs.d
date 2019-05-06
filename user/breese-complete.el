@@ -9,15 +9,14 @@
     (require 'helm-config)
     (setq
      helm-move-to-line-cycle-in-source t
-    ;(setq helm-M-x-fuzzy-match t)
-     helm-boring-buffer-regexp-list '("^ \\*" "\\*Messages" "^\\*helm")
-     ;setq helm-skip-boring-buffers t
+     )
+    (customize-set-variable 'helm-skip-boring-buffers t)
+    (customize-set-variable 'helm-boring-buffer-regexp-list '("^ \\*" "\\*Messages" "^\\*helm"))
+    (customize-set-variable 'helm-ff-skip-boring-files t)
     ;; Would like to ignore current and parent directory but this is
     ;; not allowed according to
     ;;   https://github.com/emacs-helm/helm/issues/924
     ;(setq helm-boring-file-regexp-list '("\\/\\.$" "\\/\\.\\.$"))
-    ;(setq helm-ff-skip-boring-files t)
-     )
     (helm-mode))
   :bind
   ("M-x" . helm-M-x)
