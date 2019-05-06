@@ -34,6 +34,9 @@
 ; Side-by-side comparison in ediff
 ;(setq ediff-split-window-function 'split-window-horizontally)
 
+; Prevent vertical frame splitting
+(setq split-height-threshold nil)
+
 ; Wrap lines in horizontal mode
 (setq truncate-partial-width-windows nil)
 ; Cursor moves along logical lines
