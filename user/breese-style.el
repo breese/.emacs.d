@@ -25,7 +25,8 @@
      . (("!=" . ?≠)
 	("<=" . ?≤)
 	(">=" . ?≥)
-	("->" . ?⟹)))
+	;("->" . ?⟹)
+	))
     (c-basic-offset . 4)
     (indent-tabs-mode . nil)
     (c-doc-comment-style . doxygen))
@@ -38,13 +39,17 @@
   "Dynastrom C/C++ style")
 (c-add-style "dynastrom" dynastrom-c-style)
 
-;; Maidsafe style
-;(require 'google-c-style)
-;(c-add-style "google" google-c-style)
-;(defconst maidsafe-c-style
-;  '("google")
-;  "MaidSafe.org style")
-;(c-add-style "maidsafe" maidsafe-c-style)
+;; Roku style
+(use-package google-c-style
+  :ensure t
+  :init
+  (progn
+    (c-add-style "google" google-c-style)
+    (defconst roku-c-style
+      '("roku")
+      "Roku Inc style")
+    (c-add-style "roku" roku-c-style)
+    ))
 
 ; Select different styles depending of project path
 ; http://www.emacswiki.org/emacs/ProjectSettings
@@ -55,7 +60,7 @@
      ; Most specific must be first
      ((string-match "src/aros/" bname) (c-set-style "dynastrom"))
      ((string-match "src/transenna/" bname) (c-set-style "dynastrom"))
-;     ((string-match "src/maidsafe/" bname) (c-set-style "maidsafe"))
+     ((string-match "src/roku/" bname) (c-set-style "roku"))
      ; Catch all
      ((string-match "" bname) (c-set-style "breese"))
      )))
