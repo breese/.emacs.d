@@ -28,6 +28,15 @@
     (bind-key "<escape>" #'kill-compilation compilation-mode-map))
   )
 
+; Code formatting
+; Prerequisite: clang-format OS package installed
+(use-package clang-format
+  :ensure t
+  :bind
+  ("<f4>" . clang-format-region)
+  ("S-<f4>" . clang-format-buffer)
+  )
+
 ; Modern C++ font-lock mode
 (use-package modern-cpp-font-lock
   :ensure t
