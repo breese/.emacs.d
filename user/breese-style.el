@@ -15,12 +15,11 @@
 
 ; Own C/C++ mode
 (defconst breese-c-style
-  '("gnu"
+  '("bsd"
     (c-offsets-alist
-     . ((substatement-open . 0)
+     . (
 	(innamespace . 0)
-	(brace-list-open . 0)
-	(arglist-intro . +)))
+	))
     (prettify-symbols-alist
      . (("!=" . ?≠)
 	("<=" . ?≤)
