@@ -139,7 +139,7 @@
     (add-hook 'prog-mode-hook 'yas-minor-mode)
     ;(add-to-list 'yas-snippet-dirs (concat user-emacs-directory (file-name-as-directory "snippets")))
     ; Ignore system-installed snippets
-    (setq-default yas-snippet-dirs (concat user-emacs-directory (file-name-as-directory "snippets")))
+    (setq-default yas-snippet-dirs (list (concat user-emacs-directory (file-name-as-directory "snippets"))))
     ; Disable tab completion
     (define-key yas-minor-mode-map (kbd "<tab>") nil)
     (define-key yas-minor-mode-map (kbd "TAB") nil)
