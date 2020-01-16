@@ -1,0 +1,3 @@
+#name: std::enable_if
+# --
+typename std::enable_if<$1>::type
