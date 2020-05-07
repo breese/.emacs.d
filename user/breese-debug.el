@@ -44,3 +44,6 @@
       (delete-overlay gud-overlay)))
 
 (add-hook 'kill-buffer-hook 'gud-kill-buffer)
+
+(use-package demangle-mode
+  :ensure t)
