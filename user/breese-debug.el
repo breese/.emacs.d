@@ -12,8 +12,8 @@
     ; Mode keys
     (bind-key "<f5>" #'gud-break)
     (bind-key "S-<f5>" #'gud-remove)
-    (bind-key "<f6>" #'gud-up)
-    (bind-key "S-<f6>" #'gud-down)
+    (bind-key "<f6>" #'gud-down)
+    (bind-key "S-<f6>" #'gud-up)
     (bind-key "<f7>" #'gud-cont)
     (bind-key "S-<f7>" #'gud-finish)
     (bind-key "<f8>" #'gud-next)
