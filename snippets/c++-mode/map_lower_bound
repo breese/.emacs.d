@@ -1,0 +1,7 @@
+#name : map::lower_bound()
+# --
+auto where = $1.lower_bound($2);
+if ((where == $1.end()) || ($1.key_comp()($2, where->first)))
+{
+    $3
+}
