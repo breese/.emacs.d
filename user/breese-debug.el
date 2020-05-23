@@ -4,6 +4,7 @@
   :commands gud-gdb
   :config
   (progn
+    (gud-def my-gud-buttom "frame 0" "\C-z" "Goto buttom frame")
     ; Set current directory regardless of where the executable is located
     (setq gud-gud-gdb-command-name (concat gud-gud-gdb-command-name " -cd .")
     ;(setq projectile-project-run-cmd #'gud-gdb)
@@ -14,6 +15,7 @@
     (bind-key "S-<f5>" #'gud-remove)
     (bind-key "<f6>" #'gud-down)
     (bind-key "S-<f6>" #'gud-up)
+    (bind-key "C-<f6>" #'my-gud-buttom)
     (bind-key "<f7>" #'gud-cont)
     (bind-key "S-<f7>" #'gud-finish)
     (bind-key "<f8>" #'gud-next)
