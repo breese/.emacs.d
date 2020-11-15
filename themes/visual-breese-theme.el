@@ -55,7 +55,7 @@
   `(powerline-readonly-active1 ((t (:background ,breese-red-medium :foreground ,breese-base))))
   `(powerline-inactive1 ((t (:background ,breese-base :foreground ,breese-base-dark))))
   `(powerline-inactive2 ((t (:background ,breese-base :foreground ,breese-base-dark))))
-  `(linum ((t (:foreground ,breese-base-dark))))
+  `(linum ((t (:background ,breese-blue-pale :foreground ,breese-base-dark))))
 
   ; Region
   `(region ((t (:foreground nil :background ,breese-region))))
@@ -113,6 +113,7 @@
   `(helm-buffer-file ((t (:foreground ,breese-base-dark :weight bold))))
   `(helm-buffer-not-saved ((t (:foreground ,breese-red-dark :weight bold))))
   `(helm-ff-file ((t (:foreground ,breese-base-dark :weight bold))))
+  `(helm-ff-file-extension ((t (:foreground ,breese-base-dark :weight normal))))
   `(helm-ff-directory ((t (:foreground ,breese-base-dark :italic t))))
   `(helm-ff-dotted-directory ((t (:foreground ,breese-base-dark :italic t))))
   `(helm-ff-executable ((t (:foreground ,breese-steel))))
