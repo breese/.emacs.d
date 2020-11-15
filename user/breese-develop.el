@@ -14,7 +14,13 @@
 	  (lambda () (hl-line-mode t)))
 
 ; Always enable line numbers in the margin
-(add-hook 'c-mode-common-hook 'linum-mode)
+(if --emacs26p
+    (progn
+      (global-display-line-numbers-mode t)
+      (setq display-line-numbers "%4d"))
+  (progn
+    (add-hook 'c-mode-common-hook 'linum-mode)
+    (setq linum-format "%4d")))
 
 (use-package compile
   :ensure t
