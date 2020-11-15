@@ -1,6 +1,7 @@
 ; -*- mode: emacs-lisp -*-
 
 (defconst --xemacsp (featurep 'xemacs) "Is this XEmacs?")
+(defconst --emacs26p (and (not --xemacsp) (>= emacs-major-version 26)))
 (defconst --emacs25p (and (not --xemacsp) (>= emacs-major-version 25)))
 (defconst --emacs24p (and (not --xemacsp) (>= emacs-major-version 24)))
 (defconst --emacs23p (and (not --xemacsp) (>= emacs-major-version 23)))
@@ -12,7 +13,7 @@
 ; http://emacswiki.org/emacs/ELPA
 (setq package-archives '(;("gnu" . "http://elpa.gnu.org/packages/")
                          ;("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("melpa" . "http://melpa.org/packages/")))
 (package-initialize)
 (or (file-exists-p package-user-dir)
     (package-refresh-contents))
