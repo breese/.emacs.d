@@ -34,15 +34,17 @@
   ("S-<f11>" . helm-projectile-grep)
   )
 
-; FIXME: Move to config: above
-(with-eval-after-load 'helm
+(require 'cl)
+(defun breese-remove-files (files)
+  (if (listp files)
+      (remove-if (lambda (file) (helm-dir-is-dot (car file))) files)
+    files))
+
+(with-eval-after-load 'helm-files
   (define-key helm-map (kbd "TAB") 'helm-execute-persistent-action)
   ; Disable current and parent directories
-  (advice-add 'helm-ff-filter-candidate-one-by-one
-	      :around (lambda (fcn file)
-			(unless (string-match "\\(?:/\\|\\`\\)\\.\\{1,2\\}\\'" file)
-			  (funcall fcn file))))
-  )
+  (advice-add 'helm-find-files-get-candidates
+              :filter-return #'breese-remove-files))
 
 (use-package helm-ls-git
   :ensure t
