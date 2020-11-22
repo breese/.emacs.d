@@ -85,8 +85,8 @@
   :config
   (projectile-global-mode)
   (setq projectile-completion-system 'default)
-  (setq projectile-project-compilation-cmd "(cd ../build; make)")
-  (setq projectile-project-test-cmd "(cd ../build; make test)")
+  (setq projectile-project-compilation-cmd "make -j")
+  (setq projectile-project-test-cmd "make test")
   (defun my-projectile-mode ()
     (setq-local my-projectile-mode-line (projectile-project-name))
     (setq-local my-projectile-has-mode-line t)
