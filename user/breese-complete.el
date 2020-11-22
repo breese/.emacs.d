@@ -94,7 +94,7 @@
   (add-hook 'prog-mode-hook 'my-projectile-mode)
   :bind
   ("C-X C-l" . projectile-find-file)
-  ("<f1>" . projectile-find-other-file)
+  ("S-<f1>" . projectile-find-other-file)
   ("<f9>" . projectile-compile-project)
   ("C-<f9>" . projectile-test-project)
   ;("<f11>" . projectile-multi-occur)

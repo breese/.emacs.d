@@ -12,7 +12,7 @@
 
 ; Function keys
 ; F1-F4 reserved for modes
-(global-set-key [S-f1] 'goto-line)
+(global-set-key [f1] 'goto-line)
 ; F5-F8 reserved for debugger
 ; F9 reserved for compilation
 ;(global-set-key [f9] 'compile)
