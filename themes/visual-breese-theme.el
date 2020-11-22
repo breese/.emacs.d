@@ -26,6 +26,7 @@
     ("breese-region" . "LightSteelBlue2")
     ("breese-green-pale" . "#e0eee0") ; Greenish azure2
     ("breese-red-pale" . "#eee0e0") ; Redish azure2
+    ("breese-region-pale" . "gray90")
     )
   "Colors")
 
@@ -55,7 +56,7 @@
   `(powerline-readonly-active1 ((t (:background ,breese-red-medium :foreground ,breese-base))))
   `(powerline-inactive1 ((t (:background ,breese-base :foreground ,breese-base-dark))))
   `(powerline-inactive2 ((t (:background ,breese-base :foreground ,breese-base-dark))))
-  `(linum ((t (:background ,breese-blue-pale :foreground ,breese-base-dark))))
+  `(linum ((t (:background ,breese-region-pale :foreground ,breese-base-dark))))
 
   ; Region
   `(region ((t (:foreground nil :background ,breese-region))))
