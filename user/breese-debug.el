@@ -48,4 +48,5 @@
 (add-hook 'kill-buffer-hook 'gud-kill-buffer)
 
 (use-package demangle-mode
-  :ensure t)
+  :ensure t
+  :defer t)
