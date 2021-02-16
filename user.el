@@ -45,6 +45,7 @@
 ; Presentation mode
 (use-package presentation
   :ensure t
+  :defer t
   :diminish presentation-mode)
 
 ; Further configuration
