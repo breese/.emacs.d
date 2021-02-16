@@ -10,13 +10,11 @@
     (let ((proc (get-buffer-process (current-buffer))))
       (when (processp proc)
 	(set-process-query-on-exit-flag proc nil))))
-  (add-hook 'term-exec-hook 'my-term-kill-without-query)
   (defun my-dirtrack ()
       (setq-local frame-title-format '("%b : " default-directory)))
   ; Enable highlighting of errors
   (defun my-term-setup ()
     (compilation-shell-minor-mode t))
-  (add-hook 'term-mode-hook 'my-term-setup)
   (add-hook 'term-mode-hook
 	    (lambda ()
 	      (setq mode-name "Shell")
@@ -32,6 +30,8 @@
   ; Do not echo passwords
   (add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
   (setq comint-prompt-read-only t)
+  :hook ((term-exec . my-term-kill-without-query)
+	 (term-mode . my-term-setup))
   :bind
   (("<f10>" . my-term)
    ("C-<f10>" . my-term))

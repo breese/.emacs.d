@@ -91,7 +91,7 @@
     (setq-local my-projectile-mode-line (projectile-project-name))
     (setq-local my-projectile-has-mode-line t)
     )
-  (add-hook 'prog-mode-hook 'my-projectile-mode)
+  :hook (prog-mode . my-projectile-mode)
   :bind
   ("C-X C-l" . projectile-find-file)
   ("S-<f1>" . projectile-find-other-file)
@@ -138,7 +138,6 @@
   :config
   (progn
     (setq yas-verbosity 1)
-    (add-hook 'prog-mode-hook 'yas-minor-mode)
     ;(add-to-list 'yas-snippet-dirs (concat user-emacs-directory (file-name-as-directory "snippets")))
     ; Ignore system-installed snippets
     (setq-default yas-snippet-dirs (list (concat user-emacs-directory (file-name-as-directory "snippets"))))
@@ -150,4 +149,5 @@
 	(add-to-list 'ac-sources 'ac-source-yasnipppet))
     (yas-reload-all)
     )
+  :hook (prog-mode . yas-minor-mode)
   )
