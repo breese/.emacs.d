@@ -6,6 +6,9 @@
   :diminish helm-mode
   :init
   (progn
+    ; Workaround for Emacs 25 and earlier
+    (unless (boundp 'while-no-input-ignore-events)
+      (setq while-no-input-ignore-events ()))
     (require 'helm-config)
     (setq
      helm-move-to-line-cycle-in-source t
