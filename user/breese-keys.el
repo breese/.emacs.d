@@ -18,13 +18,10 @@
 ;(global-set-key [f9] 'compile)
 ; F10 reserved for shell
 (global-set-key [f12] 'undo)
-; Increase/decrease font with page up/down
-(global-set-key [C-prior] (lambda ()(interactive)(text-scale-increase 1)))
-(global-set-key [C-next] (lambda ()(interactive)(text-scale-decrease 1)))
 
-; Apply text-scale to all buffers
-; https://www.emacswiki.org/emacs/GlobalTextScaleMode
-(defadvice text-scale-increase (around all-buffers (arg) activate)
-    (dolist (buffer (buffer-list))
-      (with-current-buffer buffer
-        ad-do-it)))
+; Increase/decrease font with page up/down
+(use-package default-text-scale
+  :ensure t
+  :bind
+  ("<C-prior>" . default-text-scale-increase)
+  ("<C-next>" . default-text-scale-decrease))
