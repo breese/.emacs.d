@@ -18,6 +18,7 @@
 ;(global-set-key [f9] 'compile)
 ; F10 reserved for shell
 (global-set-key [f12] 'undo)
+(global-set-key [Scroll_Lock] 'toggle-frame-fullscreen)
 
 ; Increase/decrease font with page up/down
 (use-package default-text-scale
