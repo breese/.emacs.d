@@ -3,12 +3,8 @@
 ; Disable default key bindings
 (global-unset-key (kbd "C-x m")) ; mail
 
-; Switch two buffers
-(require 'transpose-buffers)
-
 ; Key bindings
 (global-set-key [C-tab] 'other-window)
-(global-set-key [C-S-iso-lefttab] 'transpose-buffers)
 
 ; Function keys
 ; F1-F4 reserved for modes
@@ -26,3 +22,9 @@
   :bind
   ("<C-prior>" . default-text-scale-increase)
   ("<C-next>" . default-text-scale-decrease))
+
+; Switch two windows horizontally
+(use-package transpose-frame
+  :ensure t
+  :bind
+  ("<C-S-iso-lefttab>" . 'flop-frame))
