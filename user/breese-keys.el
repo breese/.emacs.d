@@ -14,7 +14,7 @@
 ;(global-set-key [f9] 'compile)
 ; F10 reserved for shell
 (global-set-key [f12] 'undo)
-(global-set-key [Scroll_Lock] 'toggle-frame-fullscreen)
+(global-set-key [C-S-Scroll_Lock] 'toggle-frame-fullscreen)
 
 ; Increase/decrease font with page up/down
 (use-package default-text-scale
@@ -27,4 +27,6 @@
 (use-package transpose-frame
   :ensure t
   :bind
-  ("<C-S-iso-lefttab>" . 'flop-frame))
+  (("<C-S-iso-lefttab>" . 'flop-frame)
+   ("<Scroll_Lock>" . 'flop-frame)
+   ("<C-Scroll_Lock>" . 'transpose-frame)))
