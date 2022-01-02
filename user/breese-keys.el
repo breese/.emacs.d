@@ -5,6 +5,10 @@
 
 ; Key bindings
 (global-set-key [C-tab] 'other-window)
+(global-set-key [insert] 'yank)
+(global-set-key [S-insert] 'kill-ring-save)
+(global-set-key [C-insert] 'yank-pop)
+(global-set-key [S-delete] 'kill-region)
 
 ; Function keys
 ; F1-F4 reserved for modes
